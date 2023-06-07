@@ -47,6 +47,10 @@ interface NormalizedData {
   allIds: string[];
 }
 
+// Делаем несколько интерфейсов - для поста, для нормализованного массива постов (с помощью Record<string, Post>).
+// Далее в цикле заполняем нужные нам свойства объекта и записываем их собственно в свойства. return объекта и вуаля!
+// Все работает отлично.
+
 const normalizeData = (unnormalizedData: Post[]) => {
   const allIds: string[] = [];
   const postsById: Record<string, Post> = {};
